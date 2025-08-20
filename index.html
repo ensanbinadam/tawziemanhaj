@@ -246,7 +246,7 @@ label{font-weight:800;font-size:1.05rem}
   <!-- الشريط العلوي -->
 <div class="topbar">
   <div class="brand">
-    <img class="logo" src="https://cdn.jsdelivr.net/gh/hashmathtme/1m1/moltaga.svg" alt="logo" id="brandLogo">
+    <img class="logo" src="https://cdn.jsdelivr.net/gh/ensanbinadam/tawziemanhaj/moltaga.svg" alt="logo" id="brandLogo">
     <div class="title">المساعد في توزيع المناهج</div>
     <div class="helper">واجهة إعداد ميسّرة + معاينة/طباعة PDF</div>
   </div>
@@ -274,7 +274,7 @@ label{font-weight:800;font-size:1.05rem}
   <!-- تبويب 0 -->
   <section class="panel" data-view="0">
     <div class="center-box">
-      <img src="https://cdn.jsdelivr.net/gh/hashmathtme/1m1/moltaga.svg" id="welcomeLogo" class="id-logo" alt="شعار">
+      <img src="https://cdn.jsdelivr.net/gh/ensanbinadam/tawziemanhaj/moltaga.svg" id="welcomeLogo" class="id-logo" alt="شعار">
       <h1 style="margin:8px 0 4px 0;color:#1e40af">المساعد في توزيع المناهج</h1>
       <div class="helper">ابدأ بخطوات ميسرة ومتسلسلة ثم اطبع نسخة PDF.</div>
       <div class="helper">التبويبات:
@@ -498,8 +498,8 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   /* شعارات افتراضية */
-  const DEFAULT_BRAND_LOGO = 'https://cdn.jsdelivr.net/gh/hashmathtme/1m1/moltaga.svg';
-  const DEFAULT_IDENTITY_LOGO = 'https://cdn.jsdelivr.net/gh/hashmathtme/1m1/edu.svg';
+  const DEFAULT_BRAND_LOGO = 'https://cdn.jsdelivr.net/gh/ensanbinadam/tawziemanhaj/moltaga.svg';
+  const DEFAULT_IDENTITY_LOGO = 'https://cdn.jsdelivr.net/gh/ensanbinadam/tawziemanhaj/edu.svg';
 
   /* حالة التطبيق */
   let weeksData=[];  // [{from,to,days:[...]}, ...]
@@ -1265,7 +1265,7 @@ input[type="text"]{padding:8px 10px;border:1px solid #e5e7eb;border-radius:10px;
 
   function render(){
     if (plan.header && plan.header.title) headerTitle.textContent = plan.header.title;
-    var fallbackLogo = 'https://cdn.jsdelivr.net/gh/hashmathtme/1m1/edu.svg';
+    var fallbackLogo = 'https://cdn.jsdelivr.net/gh/ensanbinadam/tawziemanhaj/edu.svg';
     var logo = (plan.header && plan.header.logo) ? plan.header.logo : fallbackLogo;
     setLogoSrc(logo);
 
