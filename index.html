@@ -1077,6 +1077,44 @@ body{font-family:"Noto Sans Arabic",sans-serif;background:#f5f7fa;color:#0f172a}
 .btn.primary{background:var(--primary);color:#fff;border-color:var(--primary)}
 .panel{background:var(--panel-bg);border:1px solid var(--panel-bd);border-radius:14px}
 .panel-hd{padding:10px 14px;border-bottom:1px dashed var(--panel-bd);font-weight:700}
+/* توسيط نص العناوين */
+.panel-hd.center{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* تلوين العبارة التحذيرية */
+.panel-hd.danger{
+  color: var(--danger, #ef4444);
+  font-weight: 800;
+}
+
+/* مسافة وفاصل خفيف بين العبارتين */
+.panel .panel-hd + .panel-hd{
+  margin-top: 10px;                 /* المسافة بين السطرين */
+  padding-top: 6px;                 /* راحة بصرية */
+  border-top: 1px dashed var(--panel-bd, #e5e7eb); /* خط فاصل علوي للثانية */
+}
+
+/* خيار إضافي: إن أردت ألا يكون هناك خط أسفل العبارة الأولى */
+.panel .panel-hd:first-of-type{
+  /* أزل التعليق إن رغبت */
+  /* border-bottom: none; */
+}
+
+/* أيقونة تنبيه قبل العبارة الحمراء */
+.panel-hd.danger::before{
+  content:"⚠️";
+  margin-inline: .4em;
+}
+
+/* تصغير خفيف للعبارة الحمراء على الشاشات الصغيرة */
+@media (max-width: 600px){
+  .panel-hd.danger{ font-size: .95em; }
+}
+
 .panel-bd{padding:12px 14px}
 .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 label{font-weight:700}
@@ -1163,7 +1201,14 @@ input[type="text"]{padding:8px 10px;border:1px solid #e5e7eb;border-radius:10px;
   </div>
 
 <section class="panel">
-  <div class="panel-hd">اكتب بيانات هويتك ثم اضغط طباعة PDF للحصول على نسخة التوزيع ببياناتك</div>
+  <div class="panel-hd center">
+    اكتب بيانات هويتك ثم اضغط طباعة PDF للحصول على نسخة التوزيع ببياناتك
+  </div>
+
+  <div class="panel-hd center danger">
+    لتجنب اقتصاص أي عنصر في المستند؛ اضبط هوامش طابعة PDF على (الحد الأدنى) عند ظهور خياراتها
+  </div>
+
   <div class="panel-bd">
     <div class="print-id-form">
       <div class="print-field">
@@ -1186,7 +1231,7 @@ input[type="text"]{padding:8px 10px;border:1px solid #e5e7eb;border-radius:10px;
   </div>
 </section>
 
-  <header class="site-header" id="printHeader">
+<header class="site-header" id="printHeader">
     <div class="col right"><img id="logoImg" class="logo" alt="شعار" src="" crossorigin="anonymous">
 </div>
     <div class="col center"><h1 class="title" id="headerTitle">توزيع المنهج</h1></div>
